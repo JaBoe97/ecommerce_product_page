@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* general */
+:root {
+  /* colors */
+  --orange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+  --veryDarkBlue: hsl(220, 13%, 13%);
+  --darkGrayishBlue: hsl(219, 9%, 45%);
+  --grayishBlue: hsl(220, 14%, 75%);
+  ---lightGrayishBlue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%); /* (with 75% opacity for lightbox background) */
+
+  /* font-weights */
+  --fontWeight700: 700;
+}
+
+.page-wrapper {
+  width: 85%;
+  margin: auto;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+p {
+  font-size: 16px;
+}
+.round-corners {
+  border-radius: 8px;
+}
+
+/* header */
+.header {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-top: 15px;
+}
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.header-left {
+  float: left;
+}
+.header-right {
+  float: right;
+}
+.navbar-list > li {
+  padding: 15px;
+}
+li > a {
+  text-decoration: none;
+  color: var(--darkGrayishBlue);
+}
+
+/* product pictures */
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 70%;
+  margin: auto;
+  padding-top: 65px;
+}
+.product-pictures-wrap {
+  width: fit-content;
+}
+.desktop-product-picture {
+  width: 350px;
+  height: auto;
+}
+.desktop-product-picture-thumbnail {
+  width: 80px;
+  height: auto;
+}
+.desktop-product-picture-thumbnail:hover {
+  border: 3px solid var(--orange);
+}
+.thumbnails {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Text */
+.brand {
+  color: var(--orange);
+}
+h1 {
+  font-weight: var(--fontWeight700);
+}
+.product-description {
+  color: var(--darkGrayishBlue);
+}
+.actual-price {
+  font-weight: var(--fontWeight700);
+}
+.discount {
+  color: var(--orange);
+  background-color: var(--paleOrange);
+}
+.previous-price {
+  color: var(--grayishBlue);
+}
+.counterAndAddToCart {
+  display: flex;
+  flex-flow: row wrap; /*shorthand for flex-direction and flex-wrap*/
+  justify-content: space-between;
+}
+.counter {
+  background-color: var(--grayishBlue);
+  width: 35%;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.minus-plus-buttons {
+  border: none;
+  background-color: transparent;
+}
+.add-to-cart-button {
+  border: none;
+  color: var(--paleOrange);
+  background-color: var(--orange);
+  width: 60%;
+  padding: 0;
+}
+
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  position: relative;
+  min-height: 100vh;
+}
+main {
+  padding-bottom: 2.5rem; /* Footer height */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; /* Footer height */
+}

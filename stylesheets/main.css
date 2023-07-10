@@ -23,9 +23,14 @@
 }
 p {
   font-size: 16px;
+  line-height: 25px;
 }
 .round-corners {
   border-radius: 8px;
+}
+button,
+a {
+  cursor: pointer;
 }
 
 /* header */
@@ -45,6 +50,10 @@ p {
 }
 .header-right {
   float: right;
+}
+.cart-button {
+  border: none;
+  background-color: transparent;
 }
 .navbar-list > li {
   padding: 15px;
@@ -70,8 +79,9 @@ li > a {
   height: auto;
 }
 .desktop-product-picture-thumbnail {
-  width: 80px;
+  width: 70px;
   height: auto;
+  border: 3px solid var(--white);
 }
 .desktop-product-picture-thumbnail:hover {
   border: 3px solid var(--orange);
@@ -79,6 +89,7 @@ li > a {
 .thumbnails {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 /* Text */
@@ -91,20 +102,41 @@ h1 {
 .product-description {
   color: var(--darkGrayishBlue);
 }
+.price-container {
+  display: grid;
+  gap: 10px;
+  width: 30%;
+  margin: 25px 0;
+}
 .actual-price {
   font-weight: var(--fontWeight700);
+  font-size: 24px;
+  grid-column: 1 / 2;
+  grid-row: 1;
 }
 .discount {
   color: var(--orange);
   background-color: var(--paleOrange);
+  font-weight: var(--fontWeight700);
+  font-size: 14px;
+  padding: 2px 8px;
+  grid-column: 2 / 2;
+  grid-row: 1;
+  height: fit-content;
+  margin-top: 2px;
 }
 .previous-price {
   color: var(--grayishBlue);
+  grid-column: 1 / 2;
+  grid-row: 2;
+  text-decoration: line-through;
 }
 .counterAndAddToCart {
   display: flex;
   flex-flow: row wrap; /*shorthand for flex-direction and flex-wrap*/
   justify-content: space-between;
+  height: 45px;
+  font-weight: var(--fontWeight700);
 }
 .counter {
   background-color: var(--grayishBlue);
@@ -113,17 +145,29 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-
+.counter-value {
+  padding: 5% 0;
+}
 .minus-plus-buttons {
   border: none;
   background-color: transparent;
+  height: fit-content;
+}
+.minus-button {
+  padding: 3% 0 7% 0;
+}
+.plus-button {
+  padding: 5% 0;
 }
 .add-to-cart-button {
   border: none;
   color: var(--paleOrange);
   background-color: var(--orange);
-  width: 60%;
+  width: 57%;
   padding: 0;
+}
+.add-to-cart-icon {
+  padding-top: 3px;
 }
 
 /* footer */

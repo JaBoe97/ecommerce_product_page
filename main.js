@@ -1,3 +1,12 @@
+/* menu toggle */
+const toggleButton = document.getElementById("menuToggleButton");
+const navList = document.getElementById("navList");
+
+toggleButton.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
+
+/* slider */
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -11,8 +20,7 @@ function currentDiv(n) {
 
 function showDivs(n) {
   var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  var x = document.getElementsByClassName("slides");
   if (n > x.length) {
     slideIndex = 1;
   }
@@ -22,9 +30,6 @@ function showDivs(n) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-red", "");
-  }
+
   x[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " w3-red";
 }

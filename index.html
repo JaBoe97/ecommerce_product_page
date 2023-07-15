@@ -70,11 +70,6 @@
             />
           </svg>
         </button>
-        <div id="cart-window" class="cart-window">
-          <h2 class="cart-header">cart</h2>
-          <div class="cart-wrapper">fadklgjklagkhfgkfkldg</div>
-          <button class="checkout-button round-corners">Checkout</button>
-        </div>
         <img
           class="profil-picture"
           src="images/image-avatar.png"
@@ -83,6 +78,12 @@
       </div>
     </header>
     <!-- header line shorter -->
+
+    <div id="cart-window" class="cart-window round-corners">
+      <h2 class="cart-header">cart</h2>
+      <div class="cart-wrapper">fadklgjklagkhfgkfkldg</div>
+      <button class="checkout-button round-corners">Checkout</button>
+    </div>
 
     <main id="main-container" class="main-container">
       <article class="product-pictures-wrap">
@@ -182,7 +183,11 @@
         </div>
         <div class="counter-add-to-cart">
           <div class="counter round-corners">
-            <button id="decrement-btn" class="transparent-buttons minus-button">
+            <button
+              id="decrement-btn"
+              class="transparent-buttons minus-button"
+              onclick="decrementCounter()"
+            >
               <svg
                 width="12"
                 height="4"
@@ -199,7 +204,11 @@
               </svg>
             </button>
             <span id="counter-value" class="counter-value">0</span>
-            <button id="increment-btn" class="transparent-buttons plus-button">
+            <button
+              id="increment-btn"
+              class="transparent-buttons plus-button"
+              onclick="incrementCounter()"
+            >
               <svg
                 width="12"
                 height="12"

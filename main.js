@@ -45,18 +45,17 @@ function toggleCart() {
 /* counter */
 let counter = 0;
 
-const counterValue = document.getElementById("counter-value");
-const incrementBtn = document.getElementById("increment-btn");
-const decrementBtn = document.getElementById("decrement-btn");
-
 // To increment the value of counter
-incrementBtn.addEventListener("click", () => {
+function incrementCounter() {
   counter++;
-  counterValue.innerHTML = counter;
-});
+  $("#counter-value").text(String(counter));
+}
 
 // To decrement the value of counter
-decrementBtn.addEventListener("click", () => {
+function decrementCounter() {
   counter--;
-  counterValue.innerHTML = counter;
-});
+  if (counter < 0) {
+    counter = 0;
+  }
+  $("#counter-value").text(String(counter));
+}

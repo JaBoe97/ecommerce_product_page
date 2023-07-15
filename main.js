@@ -1,15 +1,10 @@
-/* menu toggle */
-const toggleButton = document.getElementById("menuToggleButton");
-const navList = document.getElementById("navList");
-
-toggleButton.addEventListener("click", () => {
-  navList.classList.toggle("active");
-});
-
 /* slider */
-var slideIndex = 1;
-showDivs(slideIndex);
+let slideIndex = 1;
 
+$(document).ready(function () {
+  slideIndex = 1;
+  showDivs(slideIndex);
+});
 function plusDivs(n) {
   showDivs((slideIndex += n));
 }
@@ -19,8 +14,8 @@ function currentDiv(n) {
 }
 
 function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slides");
+  let i;
+  let x = document.getElementsByClassName("slides");
   if (n > x.length) {
     slideIndex = 1;
   }
@@ -33,3 +28,35 @@ function showDivs(n) {
 
   x[slideIndex - 1].style.display = "block";
 }
+
+/* menu toggle */
+/* const toggleButton = document.getElementById("menuToggleButton");
+const navList = document.getElementById("navList");
+
+toggleButton.addEventListener("click", () => {
+  navList.classList.toggle("active");
+}); */
+
+/* cart */
+function toggleCart() {
+  $("#cart-window").toggleClass("active");
+}
+
+/* counter */
+let counter = 0;
+
+const counterValue = document.getElementById("counter-value");
+const incrementBtn = document.getElementById("increment-btn");
+const decrementBtn = document.getElementById("decrement-btn");
+
+// To increment the value of counter
+incrementBtn.addEventListener("click", () => {
+  counter++;
+  counterValue.innerHTML = counter;
+});
+
+// To decrement the value of counter
+decrementBtn.addEventListener("click", () => {
+  counter--;
+  counterValue.innerHTML = counter;
+});

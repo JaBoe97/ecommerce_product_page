@@ -116,7 +116,7 @@
             class="desktop-product-picture slides round-corners fade"
             src="images/image-product-4.jpg"
           />
-          <div>
+          <div class="prev-next-button-container">
             <button
               class="transparent-buttons mobile-only prev-picture-button"
               onclick="plusDivs(-1)"
@@ -132,9 +132,9 @@
           </div>
         </section>
 
-        <section class="thumbnail-container">
+        <section id="thumbnail-container" class="thumbnail-container">
           <button
-            class="transparent-buttons desktop-only"
+            class="transparent-buttons desktop-only thumbnail-active"
             onclick="currentDiv(1)"
           >
             <img
@@ -212,7 +212,7 @@
                     id="a"
                   />
                 </defs>
-                <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+                <use fill="currentColor" fill-rule="nonzero" xlink:href="#a" />
               </svg>
             </button>
             <span id="counter-value" class="counter-value">0</span>
@@ -233,7 +233,7 @@
                     id="b"
                   />
                 </defs>
-                <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+                <use fill="currentColor" fill-rule="nonzero" xlink:href="#b" />
               </svg>
             </button>
           </div>

@@ -8,17 +8,34 @@ $(document).ready(function () {
 function plusDivs(n) {
   showDivs((slideIndex += n));
 }
+function lightboxPlusDivs(n) {
+  slideIndex += n;
+  let slideCount = document.getElementsByClassName("slides").length;
+  if (slideIndex > slideCount) {
+    slideIndex = 1;
+  }
+  if (slideIndex < 1) {
+    slideIndex = slideCount;
+  }
+  currentDiv(slideIndex);
+}
 
 function currentDiv(n) {
   showDivs((slideIndex = n));
   /* thumbnail active border */
   $(".thumbnail-active").removeClass("thumbnail-active");
+  $(".lightbox-thumbnail-active").removeClass("lightbox-thumbnail-active");
   $("#thumbnail-container").children()[n - 1].classList.add("thumbnail-active");
+  /* Same as last row, but formatter splits it into two on save and breaks it
+  --> split it up manually */
+  let x = $("#lightbox-thumbnail-container").children();
+  x[n - 1].classList.add("lightbox-thumbnail-active");
 }
 
 function showDivs(n) {
   let i;
   let x = document.getElementsByClassName("slides");
+  let x2 = document.getElementsByClassName("lightbox-slides");
   if (n > x.length) {
     slideIndex = 1;
   }
@@ -27,9 +44,11 @@ function showDivs(n) {
   }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
+    x2[i].style.display = "none";
   }
 
   x[slideIndex - 1].style.display = "block";
+  x2[slideIndex - 1].style.display = "block";
 }
 
 /* counter */
@@ -113,10 +132,12 @@ function closeMenu() {
 
 /* lightbox toggle open */
 function openLightbox() {
-  $("#lightbox-container").css("display", "block");
+  if (window.screen.width > 768) {
+    $("#lightbox-container").css("display", "block");
+  }
 }
 
 /* lightbox toggle close */
 function closeLightbox() {
-  $("#lightbox-pcontainer").css("display", "none");
+  $("#lightbox-container").css("display", "none");
 }

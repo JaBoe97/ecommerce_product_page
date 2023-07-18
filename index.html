@@ -198,33 +198,33 @@
             />
           </svg>
         </button>
-        <section class="product-pictures-container">
+        <section class="lightbox-product-pictures-container">
           <img
-            class="desktop-product-picture slides round-corners fade"
+            class="lightbox-desktop-product-picture lightbox-slides round-corners"
             src="images/image-product-1.jpg"
           />
           <img
-            class="desktop-product-picture slides round-corners fade"
+            class="lightbox-desktop-product-picture lightbox-slides round-corners"
             src="images/image-product-2.jpg"
           />
           <img
-            class="desktop-product-picture slides round-corners fade"
+            class="lightbox-desktop-product-picture lightbox-slides round-corners"
             src="images/image-product-3.jpg"
           />
           <img
-            class="desktop-product-picture slides round-corners fade"
+            class="lightbox-desktop-product-picture lightbox-slides round-corners"
             src="images/image-product-4.jpg"
           />
-          <div class="prev-next-button-container">
+          <div class="lightbox-prev-next-button-container">
             <button
               class="transparent-buttons desktop-only prev-picture-button"
-              onclick="plusDivs(-1)"
+              onclick="lightboxPlusDivs(-1)"
             >
               ❮
             </button>
             <button
               class="transparent-buttons desktop-only next-picture-button"
-              onclick="plusDivs(1)"
+              onclick="lightboxPlusDivs(1)"
             >
               ❯
             </button>
@@ -232,47 +232,50 @@
         </section>
 
         <!-- thumbnails -->
-        <section id="thumbnail-container" class="thumbnail-container">
+        <section
+          id="lightbox-thumbnail-container"
+          class="lightbox-thumbnail-container"
+        >
           <button
-            class="transparent-buttons desktop-only thumbnail-active"
+            class="transparent-buttons desktop-only lightbox-thumbnail-button round-corners lightbox-thumbnail-active"
             onclick="currentDiv(1)"
           >
             <img
               class="desktop-product-picture-thumbnail round-corners"
-              id="first-product-picture"
+              id="lightbox-first-product-picture"
               src="images/image-product-1.jpg"
               alt="product image thumbnail"
             />
           </button>
           <button
-            class="transparent-buttons desktop-only"
+            class="transparent-buttons desktop-only lightbox-thumbnail-button round-corners"
             onclick="currentDiv(2)"
           >
             <img
               class="desktop-product-picture-thumbnail round-corners"
-              id="second-product-picture"
+              id="lightbox-second-product-picture"
               src="images/image-product-2.jpg"
               alt="product image thumbnail"
             />
           </button>
           <button
-            class="transparent-buttons desktop-only"
+            class="transparent-buttons desktop-only lightbox-thumbnail-button round-corners"
             onclick="currentDiv(3)"
           >
             <img
               class="desktop-product-picture-thumbnail round-corners"
-              id="third-product-picture"
+              id="lightbox-third-product-picture"
               src="images/image-product-3.jpg"
               alt="product image thumbnail"
             />
           </button>
           <button
-            class="transparent-buttons desktop-only"
+            class="transparent-buttons desktop-only lightbox-thumbnail-button round-corners"
             onclick="currentDiv(4)"
           >
             <img
               class="desktop-product-picture-thumbnail round-corners"
-              id="fourth-product-picture"
+              id="lightbox-fourth-product-picture"
               src="images/image-product-4.jpg"
               alt="product image thumbnail"
             />

@@ -260,6 +260,12 @@ li > a {
   justify-content: space-between;
   margin-top: 20px;
 }
+.thumbnail-active {
+  filter: opacity(40%);
+}
+.thumbnail-active:hover {
+  filter: opacity(100%);
+}
 .thumbnail-active > img {
   border: 2px solid var(--orange);
 }
@@ -391,22 +397,56 @@ footer {
   display: none;
   position: absolute;
   z-index: 2;
-  top: 50%;
-  left: 50%;
-  box-shadow: 0 0 1000px 1000px var(--blackShadow);
+  top: 15%;
+  left: 20%;
+  height: 70%;
+  width: 60%;
 }
 .close-lightbox-button {
   border: none;
   background-color: transparent;
   margin-right: 0;
-  margin-left: 90%;
+  margin-left: 82%;
+  margin-bottom: 10px;
+  color: var(--white);
 }
 .close-lightbox-button:hover {
   color: var(--orange);
 }
 
-@media (max-width: 768px) {
-  .lightbox-container {
-    display: none;
-  }
+.lightbox-product-pictures-container {
+  max-width: 800px;
+}
+.lightbox-desktop-product-picture {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 0 1000px 5000px var(--blackShadow);
+}
+
+.lightbox-prev-next-button-container {
+  width: 76%;
+  left: 12%;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.lightbox-thumbnail-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 20px auto 0 auto;
+}
+
+.lightbox-thumbnail-button {
+  height: 75px;
+  background-color: var(--white);
+}
+.lightbox-thumbnail-active {
+  border: 2px solid var(--orange);
+  height: 78.2px;
+}
+.lightbox-thumbnail-active > img {
+  filter: opacity(40%);
 }

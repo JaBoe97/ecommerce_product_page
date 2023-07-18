@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="./stylesheets/normalize.css" />
     <link rel="stylesheet" href="./stylesheets/main.css" />
+    <link rel="stylesheet" href="./stylesheets/mobile.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
@@ -48,6 +49,7 @@
           </a>
         </div>
         <div id="dropdown-menu" class="dropdown-menu">
+          <!-- menu -->
           <button class="close-menu-button mobile-only" onClick="closeMenu()">
             <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -66,6 +68,7 @@
           </ul>
         </div>
       </nav>
+      <!-- cart -->
       <div class="cart-button-and-profil-picture">
         <button id="cart-button" class="cart-button" onclick="toggleCart()">
           <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +86,6 @@
         />
       </div>
     </header>
-    <!-- header line shorter -->
 
     <div id="cart-window" class="cart-window round-corners">
       <h2 class="cart-header">cart</h2>
@@ -99,7 +101,8 @@
 
     <main id="main-container" class="main-container">
       <article class="product-pictures-wrap">
-        <section class="product-pictures-container">
+        <section class="product-pictures-container" onClick="openLightbox()">
+          <!-- pictures -->
           <img
             class="desktop-product-picture slides round-corners fade"
             src="images/image-product-1.jpg"
@@ -132,6 +135,103 @@
           </div>
         </section>
 
+        <section id="thumbnail-container" class="thumbnail-container">
+          <!-- thumbnails -->
+          <button
+            class="transparent-buttons desktop-only thumbnail-active"
+            onclick="currentDiv(1)"
+          >
+            <img
+              class="desktop-product-picture-thumbnail round-corners"
+              id="first-product-picture"
+              src="images/image-product-1.jpg"
+              alt="product image thumbnail"
+            />
+          </button>
+          <button
+            class="transparent-buttons desktop-only"
+            onclick="currentDiv(2)"
+          >
+            <img
+              class="desktop-product-picture-thumbnail round-corners"
+              id="second-product-picture"
+              src="images/image-product-2.jpg"
+              alt="product image thumbnail"
+            />
+          </button>
+          <button
+            class="transparent-buttons desktop-only"
+            onclick="currentDiv(3)"
+          >
+            <img
+              class="desktop-product-picture-thumbnail round-corners"
+              id="third-product-picture"
+              src="images/image-product-3.jpg"
+              alt="product image thumbnail"
+            />
+          </button>
+          <button
+            class="transparent-buttons desktop-only"
+            onclick="currentDiv(4)"
+          >
+            <img
+              class="desktop-product-picture-thumbnail round-corners"
+              id="fourth-product-picture"
+              src="images/image-product-4.jpg"
+              alt="product image thumbnail"
+            />
+          </button>
+        </section>
+      </article>
+
+      <article id="lightbox-container" class="lightbox-container">
+        <!-- lightbox -->
+        <button
+          class="close-lightbox-button desktop-only"
+          onClick="closeLightbox()"
+        >
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <section class="product-pictures-container">
+          <img
+            class="desktop-product-picture slides round-corners fade"
+            src="images/image-product-1.jpg"
+          />
+          <img
+            class="desktop-product-picture slides round-corners fade"
+            src="images/image-product-2.jpg"
+          />
+          <img
+            class="desktop-product-picture slides round-corners fade"
+            src="images/image-product-3.jpg"
+          />
+          <img
+            class="desktop-product-picture slides round-corners fade"
+            src="images/image-product-4.jpg"
+          />
+          <div class="prev-next-button-container">
+            <button
+              class="transparent-buttons desktop-only prev-picture-button"
+              onclick="plusDivs(-1)"
+            >
+              ❮
+            </button>
+            <button
+              class="transparent-buttons desktop-only next-picture-button"
+              onclick="plusDivs(1)"
+            >
+              ❯
+            </button>
+          </div>
+        </section>
+
+        <!-- thumbnails -->
         <section id="thumbnail-container" class="thumbnail-container">
           <button
             class="transparent-buttons desktop-only thumbnail-active"
@@ -180,6 +280,7 @@
         </section>
       </article>
 
+      <!-- product description -->
       <article class="text">
         <div class="brand">sneaker company</div>
         <h1>Fall Limited Edition Sneakers</h1>

@@ -110,3 +110,13 @@ function openMenu() {
 function closeMenu() {
   $("#dropdown-menu").css("display", "none");
 }
+
+/* lightbox toggle open */
+function openLightbox() {
+  $("#lightbox-container").css("display", "block");
+}
+
+/* lightbox toggle close */
+function closeLightbox() {
+  $("#lightbox-pcontainer").css("display", "none");
+}

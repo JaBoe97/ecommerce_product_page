@@ -214,7 +214,7 @@ li > a {
   height: auto;
 }
 .product-pictures-container {
-  max-width: 800px;
+  max-width: 1000px;
   cursor: pointer;
 }
 .transparent-buttons {
@@ -311,6 +311,7 @@ h1 {
   grid-column: 2 / 2;
   grid-row: 1;
   height: fit-content;
+  width: fit-content;
   margin-top: 2px;
 }
 .previous-price {
@@ -332,17 +333,14 @@ h1 {
   width: 35%;
   padding: 5px 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.counter-value {
-  padding: 5% 0;
-}
 .minus-button {
-  padding: 3% 0 7% 0;
   color: var(--orange);
+  margin-bottom: 5px;
 }
 .plus-button {
-  padding: 5% 0;
   color: var(--orange);
 }
 .minus-button:hover,

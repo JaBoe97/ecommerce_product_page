@@ -72,6 +72,9 @@ function decrementCounter() {
 /* cart Button */
 function toggleCart() {
   $("#cart-window").toggleClass("displayed");
+  if ($(window).width() < 910) {
+    closeMenu();
+  }
 }
 
 /* delete cart items */
@@ -122,7 +125,10 @@ function addToCart() {
 
 /* mobile menu open*/
 function openMenu() {
-  $("#dropdown-menu").css("display", "flex");
+  $("#cart-window").removeClass("displayed");
+  if ($(window).width() < 910) {
+    $("#dropdown-menu").css("display", "flex");
+  }
 }
 
 /* mobile menu toggle close*/

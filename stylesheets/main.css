@@ -412,9 +412,6 @@ footer {
   color: var(--orange);
 }
 
-.lightbox-product-pictures-container {
-  max-width: 800px;
-}
 .lightbox-desktop-product-picture {
   width: 70%;
   margin: 0 auto;
